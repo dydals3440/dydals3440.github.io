@@ -6,7 +6,7 @@ module.exports = {
   ogImage: `/og-image.png`, // Path to your in the 'static' folder
   comments: {
     utterances: {
-      repo: ``, // `zoomkoding/zoomkoding-gatsby-blog`,
+      repo: `dydals3440/dydals3440.github.io`, // `zoomkoding/zoomkoding-gatsby-blog`,
     },
   },
   ga: '0', // Google Analytics Tracking ID
@@ -19,7 +19,7 @@ module.exports = {
     },
     social: {
       github: `https://github.com/dydals3440`, // `https://github.com/zoomKoding`,
-      linkedIn: ``, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
+      linkedIn: `www.linkedin.com/in/dydals3440`, // `https://www.linkedin.com/in/jinhyeok-jeong-800871192`,
       email: `dydals3440@gmail.com`, // `zoomkoding@gmail.com`,
     },
   },
