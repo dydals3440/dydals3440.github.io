@@ -1,9 +1,9 @@
 module.exports = {
-  title: `dydals3440.com`,
+  title: `dydals3440.netlify.app`,
   description: `경영학도의 개발일기`,
   language: `ko`, // `ko`, `en` => currently support versions for Korean and English
   siteUrl: `https://dydals3440.netlify.app/`,
-  ogImage: `/og-image.png`, // Path to your in the 'static' folder
+  ogImage: `/Profile.jpeg`, // Path to your in the 'static' folder
   comments: {
     utterances: {
       repo: `dydals3440/dydals3440.github.io`, // `zoomkoding/zoomkoding-gatsby-blog`,
@@ -43,12 +43,12 @@ module.exports = {
       // ========================================================
       // ========================================================
       {
-        date: '2021.02 ~',
+        date: '2023.04 ~',
         activity: '개인 블로그 개발 및 운영',
         links: {
           post: '/gatsby-starter-zoomkoding-introduction',
-          github: 'https://github.com/zoomkoding/zoomkoding-gatsby-blog',
-          demo: 'https://www.zoomkoding.com',
+          github: 'https://github.com/dydals3440/dydals3440.github.io',
+          demo: 'https://dydals3440.netlify.app/',
         },
       },
     ],
