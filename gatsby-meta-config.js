@@ -14,8 +14,12 @@ module.exports = {
     name: `김용민`,
     bio: {
       role: `개발자`,
-      description: ['사람에 가치를 두는', '소통을 중요시 하는', '새로운 것을 만드는'],
-      thumbnail: 'sample.png', // Path to the image in the 'asset' folder
+      description: [
+        '사람에 가치를 두는',
+        '소통을 중요시 하는',
+        '변화에 빠르게 적응하고자 노력하는',
+      ],
+      thumbnail: 'Profile.png', // Path to the image in the 'asset' folder
     },
     social: {
       github: `https://github.com/dydals3440`, // `https://github.com/zoomKoding`,
