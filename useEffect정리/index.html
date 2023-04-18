@@ -78,7 +78,7 @@
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span> <span class="token comment">// 작업 ... }, [value])</span></code></pre></div>
 <p>화면에 첫 렌더링 될떄 실행, value 값이 바뀔때 마다 실행!</p>
 <h3 id="자주-쓰는-경우" style="position:relative;"><a href="#%EC%9E%90%EC%A3%BC-%EC%93%B0%EB%8A%94-%EA%B2%BD%EC%9A%B0" aria-label="자주 쓰는 경우 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>자주 쓰는 경우</h3>
-<p>Clean Up - 정리 할떄 useEffect의 리턴 값으로 함수를 넣어주면 됩니다.</p>
+<p>Clean Up - 정리 할떄 <span style="background-color:yellow">useEffect</span>의 리턴 값으로 함수를 넣어주면 됩니다.</p>
 <p>구독할 경우, 구독을 해지 해 주는 정리 작업을 해주어야 합니다. 타이머를 실행했다면, 타이머를 멈추는 정리 작업, eventListener를 등록했다면 이것을 정리해주는 정리작업도 필요. 이런 경우에는 <span style="background-color:yellow">useEffect</span>의 리턴 값으로 함수를 넣어주면 된다.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// 구독해지 코드 예시</span>
 <span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -125,8 +125,8 @@
 <span class="token punctuation">}</span>
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
-<p>위의 코드에 우리가 렌더링 될떄마다 <span style="background-color:yellow">useEffect</span>가 실행되는지 한번 확인해 보겠습니다.
-<img src="https://velog.velcdn.com/images/dydals3440/post/932ba3fa-8048-4b0f-ace1-1a357e86e12c/image.mov" alt="useEffect 활용 영상"></p>
+<p>위의 코드에 우리가 렌더링 될떄마다 아래와 같이 <span style="background-color:yellow">useEffect</span>가 정상적으로 실행되는지 한번 확인해 보겠습니다.</p>
+<p><img src="./%EC%B9%B4%EC%9A%B4%ED%8A%B8%EC%8B%9C%EC%97%90%EB%A7%8C.png" alt="useEffect 활용 영상"></p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> useState<span class="token punctuation">,</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
 <span class="token keyword">function</span> <span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -148,13 +148,33 @@
 
 <span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span></code></pre></div>
 <p>이번에는 input창을 받아와서 우리가 입력한 것을 그대로 화면에 출력해주는 것을 만들어서, 렌더링여부를 확인해 보겠습니다.</p>
-<p>// 렌더링 이미지 (글씨 포함)</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 712px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 101.11111111111111%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAABYlAAAWJQFJUiTwAAABx0lEQVQ4y82U627aQBCF/f7PwhNUbbkFaAIGX7AN+IoxiRSoiG+AuPirvCktRG1DVX50pKOdWc2ec7SrHWn++Ei71aZer1GtVtF1nZFlYZkmiqIQRTOWiwXXRFEUSG4Q8uFjnU+1O2qNFopmYlg2+nCEYU6Yhk88L2PidMtLkrPb79ntdhyPRw6HA3meE8exqMuQgnBOo9FkFkViY7c//FK5jDTL+Vyt0+l0aDabhGGILPepVCpst9tXwjjNeXpesvi6YpVkrOJMOBF5UuYZL2kuUNZplonD6/Wa/X7P8ViQZdkPUemtk/fw7h1e23yNqHB4Sq5xd37wdwbeEPLPcUnIrQn/f4e3Iiz+8pX/BKm4xcWdOyw/9S0hbdZrNpvNzSAlScI50vSy/rmfvq4XdSxGVwnRF8dIvucTBFNcx8UPpkxsF98P8Dwfzw9wXA/P95nYDn4Q4Jz6JjbBNGQWzQlnEa7nMQ1DJLnXp9cb0OvK3D/INNoymm5hGCaGaWKW03s0Erk1GmOYFuPxBHmg8OWhx0DV6CsqnfsuXbmPVA7IVrOOpmpomo6qqhhDA10fMtR1HMcRcL+vJ9i2LYRK8lL0rtUSw/YbRtEErlqIY7oAAAAASUVORK5CYII='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="useEffect 활용 영상"
+        title="useEffect 활용 영상"
+        src="/static/50d49fcafc70a8e4ab4c50616bf016e2/3d4b6/useEffect.png"
+        srcset="/static/50d49fcafc70a8e4ab4c50616bf016e2/e9ff0/useEffect.png 180w,
+/static/50d49fcafc70a8e4ab4c50616bf016e2/f21e7/useEffect.png 360w,
+/static/50d49fcafc70a8e4ab4c50616bf016e2/3d4b6/useEffect.png 712w"
+        sizes="(max-width: 712px) 100vw, 712px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+        decoding="async"
+      />
+    </span></p>
 <p>useEffect 함수를 매번 렌더링이 될 때마다 불리게 된다면 정말 비효율 적이란 것을 확인할 수 있다. 우리가, name이 업데이트 되었을 때는 렌더링이 되지않고, count가 업데이트 되었을 때만 렌더링이 되도록 실행하고 싶으면 [] dependency array를 이용하면 된다. [count]라고 해보고 코드를 실행해보자</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'렌더링된당.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>count<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
-<p>;; 카운트 시에만 렌더링 되는 이미지</p>
-<p>잘 작동되는 것을 확인할 수 있다. 특정한 행위일떄만 렌더링 되고싶으면 []에 원하는 행위의 값을 넣어주면 된다.</p>
+<p>카운트시에만 잘 작동되는 것을 확인할 수 있다. 특정한 행위일떄만 렌더링 되고싶으면 []에 원하는 행위의 값을 넣어주면 된다.</p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token function">useEffect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'그냥 다 렌더링'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -167,10 +187,11 @@
   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'이름이 변경되어 렌더링'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>name<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
 <p>이 코드를 추가하고 실행결과를 확인해보자.</p>
-<p>~ 모두다 바뀌는 useEffect 이미지</p>
+<p><img src="./%EC%A0%84%EC%B2%B4%20%EC%9E%91%EB%8F%99.png" alt="useEffect 활용 영상"></p>
 <h3 id="cleanup-예제" style="position:relative;"><a href="#cleanup-%EC%98%88%EC%A0%9C" aria-label="cleanup 예제 permalink" class="anchor before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>cleanUp 예제</h3>
 <p>타이머 컴포넌트를 만들어 예시로 사용해보겠습니다.
 버튼을 누르면 타이머가 실행되고, 콘솔에 2초마다 찍히도록 제작해보겠습니다.</p>
+<p><img src="./%ED%83%80%EC%9D%B4%EB%A8%B8%20%EC%9E%91%EB%8F%99.gif" alt=""></p>
 <div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// Timer.jsx</span>
 <span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> useEffect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'react'</span><span class="token punctuation">;</span>
 
