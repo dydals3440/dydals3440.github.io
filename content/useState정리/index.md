@@ -236,4 +236,4 @@ const [names, setNames] = useState(() => veryComplexWork());
 
 ![](https://velog.velcdn.com/images/dydals3440/post/028d0d78-78e4-4a7b-a5d6-a5f3a88d5352/image.mov)
 
-**UMC 활동에 대해 궁금하신 점이 있다면 아래 `댓글`로 남겨주세요!👇**
+**useState에 대해 궁금하신 점이 있거나 위의 내용 중 수정해야할 내용이 있을시에 아래 `댓글`로 남겨주세요!👇**
