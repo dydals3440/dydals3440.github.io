@@ -1,6 +1,6 @@
 ---
 emoji: 📶
-title: useState Hook에 대해 자세하게 알아보자!
+title: useEffect Hook에 대해 자세하게 알아보자!
 date: '2023-04-17 22:11:00'
 author: dydals3440
 tags: react useEffect
